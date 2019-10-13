@@ -1,0 +1,7 @@
+(define (gen-s f a b next)
+  (if (> a b)
+      '()
+      (cons (f a) (gen-s f (next a) b next))))
+
+
+(gen-s (lambda (x) (+ x x)) 12 15 (lambda (x) (+ x 2)))

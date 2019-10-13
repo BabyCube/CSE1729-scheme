@@ -1,0 +1,11 @@
+> "problem-1"
+
+  (define (number-sum n)
+    (if (= n 0)
+        0
+        (+ n (number-sum (- n 1)))))
+"problem-1a"
+(define (odd-sum n)
+   (if (= n 1)
+       1
+       (/ (- (number-sum n) n) 2)))
